@@ -6,7 +6,7 @@ I will update this every time i find something new to make better
 
 ### 1.1 use propTypes
 
-I recommend using prop-types in each of your components. It is a very useful part of documentation of your
+I recommend using ``propTypes`` in each of your components. It is a very useful part of documentation of your
 component and also enables auto-completion for some IDEs. In dev mode React will also warn the developer
 if there are mandatory propTypes missing or the developer passed down props with a wrong time. So propTypes
 is also some sort of static type checking directly integrated into React.
@@ -20,7 +20,7 @@ export default class ExampleComponent extends Component {
 }
 ```
   
-more info about propTypes here: https://facebook.github.io/react/docs/typechecking-with-proptypes.html
+more info about propTypes here: [propTypes documentation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)
 
 ### 1.2 avoid undefined checks of props with defaultProps
 
@@ -29,7 +29,7 @@ to configure something. So if the developer uses your component and doesn't spec
 will receive a undefined value. 
 
 Most of the time it's much more useful to assign a default-value to a prop and let the developer override
-your prop if necessary. And React already provides a great way to do this! 
+your prop if necessary. And React already provides a great way to do this with ``defaultProps``! 
 
 ```js
 export default class ExampleComponent extends Component { 
@@ -39,6 +39,6 @@ export default class ExampleComponent extends Component {
 }
 ```
 
-Like propTypes you can define defaultProps as a static variable on your component. If you define your
-defaultProps on your component you doesn't need to always check for undefined or assign values in 
+Like ``propTypes`` you can define defaultProps as a static variable on your component. If you define your
+``defaultProps`` on your component you doesn't need to always check for undefined or assign values in 
 any lifecycle-hooks!
