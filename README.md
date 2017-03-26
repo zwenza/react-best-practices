@@ -94,7 +94,7 @@ Additional reading:
 
 ### 1.4 put async actions into componentDidMount
 
-Sometimes your component will need data which needs to be fetched first. So where do you put asynchronous actions in your react component? The answer is: componentDidMount
+Sometimes your component has to fetch data. So where do you put asynchronous actions in your react component? The answer is: componentDidMount
 
 There are actually "three" possible places:
 1. componentWillMount
