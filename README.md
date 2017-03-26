@@ -88,5 +88,6 @@ this.setState(prevState => ({ done: !prevState.done }))
 ```
 
 Additional reading:
+* [Eric Elliott - Medium](https://medium.com/javascript-scene/setstate-gate-abc10a9b2d82#.uhq9u57pd)
 * [Musefind - Medium](https://engineering.musefind.com/our-best-practices-for-writing-react-components-dec3eb5c3fc8#.xndrx3uif), 
 * [Tomas Carnecky - Medium](https://medium.com/@wereHamster/beware-react-setstate-is-asynchronous-ce87ef1a9cf3#.41mpihie2)
