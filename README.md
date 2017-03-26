@@ -14,10 +14,10 @@ if there are mandatory PropTypes missing or when the developer passed down props
 is also some kind of static type checking directly integrated into React.
 
 ```js
-class ExampleComponent extends React.Component { 
+class TodoListItem extends React.Component { 
   static propTypes = {
-    title: React.PropTypes.string.required,
-    description: React.PropTypes.string
+    description: React.PropTypes.string.isRequired,
+    done: React.PropTypes.bool
   }
 }
 ```
@@ -35,9 +35,14 @@ Most of the time it's more useful to assign a default-value to a prop and let th
 your prop if necessary. React already provides a great way to do this with ``defaultProps``! 
 
 ```js
-class ExampleComponent extends React.Component { 
+class TodoListItem extends React.Component { 
+  static propTypes = {
+    description: React.PropTypes.string,
+    done: React.PropTypes.bool
+  }
   static defaultProps = {
-    description: 'no description given!'
+    description: 'no description specified!',
+    done: false
   }
 }
 ```
@@ -64,9 +69,9 @@ in the correct order!
 Sometimes it's obvious that multiple ``setState()`` calls happen right after each other in the code
 
 ```js
-this.setState({ ...this.state, test: true });
+this.setState({ ...this.state, done: true });
 if (condition) {
-    this.setState({ ...this.state, test: false });
+    this.setState({ ...this.state, done: false });
 }
 ```
 
@@ -79,7 +84,7 @@ your ``setState()`` calls.
 Here’s the solution — pass a function to setState, with the previous state as an argument.
 
 ```js
-this.setState(prevState => ({ test: !prevState.test }))
+this.setState(prevState => ({ done: !prevState.done }))
 ```
 
 Additional reading:
